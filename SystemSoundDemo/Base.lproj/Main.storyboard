@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fL6-ND-5As">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SystemSoundDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yPH-k2-gja">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="vhi-rz-b6a"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="9fY-N1-yb0"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yPH-k2-gja" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2Ca-1C-2Eo"/>
+                            <constraint firstItem="yPH-k2-gja" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="J6t-Wk-dVn"/>
+                            <constraint firstItem="yPH-k2-gja" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Wgs-1u-OVP"/>
+                            <constraint firstItem="yPH-k2-gja" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="rIC-Kb-gjd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="22E-m9-6Fu"/>
+                    <connections>
+                        <outlet property="tableView" destination="yPH-k2-gja" id="enD-Vn-XWs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1952.1739130434785" y="99.776785714285708"/>
+        </scene>
+        <!--Two Table View Controller-->
+        <scene sceneID="csk-5h-ozr">
+            <objects>
+                <tableViewController id="b7U-o9-tmC" customClass="TwoTableViewController" customModule="SystemSoundDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="MRh-6J-kwR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="eVO-1T-aJL">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eVO-1T-aJL" id="Odx-UB-fZz">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="b7U-o9-tmC" id="azD-iu-mFY"/>
+                            <outlet property="delegate" destination="b7U-o9-tmC" id="I6H-K2-iHf"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="INs-cG-ob9"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Th6-wx-aV1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1950.7246376811595" y="769.41964285714278"/>
+        </scene>
+        <!--Sound ID-->
+        <scene sceneID="fhJ-Dg-KNZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="29N-3r-au5" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Sound ID" image="tab1.png" id="rjc-4Y-XpT"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MK8-T0-qol">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="PN5-6a-J7W"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AIt-Q0-u0p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042.0289855072465" y="99.776785714285708"/>
+        </scene>
+        <!--File Name-->
+        <scene sceneID="8Eb-HL-8l8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iYt-Gx-bm5" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="File Name" image="tab2.png" id="JkM-Yc-G9f"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="r2f-1A-TKo">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="b7U-o9-tmC" kind="relationship" relationship="rootViewController" id="tPe-b7-omH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nZD-dC-UfR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042.0289855072465" y="776.78571428571422"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="hgd-63-xWJ">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="fL6-ND-5As" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="d4e-0G-L8O">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="29N-3r-au5" kind="relationship" relationship="viewControllers" id="kVv-aI-muQ"/>
+                        <segue destination="iYt-Gx-bm5" kind="relationship" relationship="viewControllers" id="CxT-fS-Lrf"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jwB-f8-dvT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="437.94642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tab1.png" width="22" height="22"/>
+        <image name="tab2.png" width="22" height="22"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
